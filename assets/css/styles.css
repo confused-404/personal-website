@@ -119,12 +119,12 @@ header {
 
 @media (min-width: 769px) {
     .mini-header .mini-nav {
+        display: flex !important;
         flex-direction: row;
         position: static;
         background: none;
         padding: 0;
         box-shadow: none;
-        display: flex;
     }
 
     .mini-header .mini-nav a {
