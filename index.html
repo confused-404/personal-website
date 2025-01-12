@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yves Kloeckner - Portfolio</title>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <h1>Yves Kloeckner</h1>
-        <p>Creative Developer | Designer | Problem Solver</p>
+        <div class="full-header">
+            <h1>Yves Kloeckner</h1>
+            <p>Aspiring Developer</p>
+        </div>
+        <div class="mini-header">
+            <span class="mini-name">Yves Kloeckner</span>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="mini-nav">
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
+
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am a passionate developer and designer focused on creating intuitive and impactful digital experiences. Let's build something amazing together!</p>
+        <p>Hello! I'm a high school student from Utah with a deep passion for programming. I enjoy crafting impactful
+            applications, solving challenging problems, and continually improving my technical skills. My journey in
+            programming has been driven by curiosity and a desire to create innovative solutions, and I aspire to turn
+            this passion into a fulfilling career.</p>
     </section>
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="project">
-            <h3>Project Title</h3>
-            <p>Short description of the project. Highlight key features or achievements here.</p>
+            <h3>C++ Chat App with Winsock</h3>
+            <p>A terminal chat server I made in C++ with Winsock to learn a little about networking. Successfully
+                handles multiple clients. Also made a python script to test it.</p>
+            <a href="https://github.com/confused-404/chat-app" target="_blank" class="github-link">View on GitHub</a>
         </div>
         <div class="project">
-            <h3>Project Title</h3>
-            <p>Short description of the project. Highlight key features or achievements here.</p>
-        </div>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p>Short description of the project. Highlight key features or achievements here.</p>
+            <h3>Water Watcher</h3>
+            <p>A project I made with a friend in a few days for a hackathon. Aimed at preventing the possibility and
+                reducing the impact of droughts around the world, by encouraging people to save water in a gamified way.
+            </p>
+            <a href="https://devpost.com/software/water-watcher" target="_blank" class="github-link">View full
+                description</a>
+            <a href="https://github.com/confused-404/water-watcher" target="_blank" class="github-link">View on
+                GitHub</a>
         </div>
     </section>
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
             <div class="skill">Python</div>
-            <div class="skill">React</div>
-            <div class="skill">UI/UX Design</div>
+            <div class="skill">C++</div>
+            <div class="skill">AWS</div>
         </div>
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <p>Interested in working together? Reach out to me at <a href="mailto:hosta.gruen@gmail.com" style="color: #7f7f7f;">hosta.gruen@gmail.com</a>.</p>
+        <p>Interested in working together? Reach out to me at <a href="mailto:hosta.gruen@gmail.com"
+                style="color: #7f7f7f;">hosta.gruen@gmail.com</a>.</p>
         <div class="socials">
             <a href="https://www.linkedin.com/in/yves-k-0b92992b5/" target="_blank">LinkedIn</a>
             <a href="https://github.com/confused-404" target="_blank">GitHub</a>
@@ -59,4 +80,5 @@
         Yves Kloeckner 2025
     </footer>
 </body>
+
 </html>
