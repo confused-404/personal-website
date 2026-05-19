@@ -12,6 +12,7 @@
     --accent-soft: rgba(102, 217, 239, 0.13);
     --shadow: rgba(0, 0, 0, 0.36);
     --content: 920px;
+    --gutter: clamp(24px, 5vw, 40px);
 }
 
 * {
@@ -70,7 +71,7 @@ button:focus-visible {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    padding: 18px max(16px, calc((100% - var(--content)) / 2));
+    padding: 18px max(var(--gutter), calc((100% - var(--content)) / 2));
     pointer-events: none;
 }
 
@@ -100,7 +101,7 @@ button:focus-visible {
 }
 
 main {
-    width: min(var(--content), calc(100% - 32px));
+    width: min(var(--content), calc(100% - (var(--gutter) * 2)));
     margin: 0 auto;
 }
 
