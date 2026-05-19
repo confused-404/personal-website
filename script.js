@@ -1,10 +1,23 @@
 const projects = [
     {
+        title: 'RRR Scouting App',
+        summary: 'A full-stack scouting platform used by Red Rock Robotics to collect, analyze, and export FRC match data during competition.',
+        how: 'Led core development and system design across a React/Vite frontend, Node/Express backend, Firebase storage/auth, real-time data entry, visualization, filtering, and export workflows.',
+        why: 'The app supports live strategy work for a top-ranked robotics team, handling concurrent scouts and unreliable competition Wi-Fi while keeping match data usable for drive team prep and alliance selection.',
+        tags: ['React', 'Node.js', 'Express', 'Firebase', 'FRC'],
+        links: [
+            {
+                label: 'GitHub',
+                url: 'https://github.com/confused-404/rrr-scouting-app'
+            }
+        ]
+    },
+    {
         title: 'Siren Detector',
-        summary: 'A real-time embedded audio system that detects emergency sirens and car honks for deaf drivers.',
+        summary: 'A TSA software development project: a real-time embedded audio system that detects emergency sirens and car honks for deaf drivers.',
         how: 'Built around a Raspberry Pi 5 with dual I2S microphones, a Python/FastAPI backend, log-spectrogram CNN inference, and GCC-PHAT direction estimation.',
-        why: 'The project connects low-level audio capture, edge ML inference, and directional signal processing into a practical alert system with a lightweight web dashboard.',
-        tags: ['Python', 'FastAPI', 'Raspberry Pi', 'TFLite', 'Signal Processing'],
+        why: 'Won first place in Software Development at the 2026 Utah TSA State Conference and will be presented at the national conference in June 2026.',
+        tags: ['Python', 'FastAPI', 'Raspberry Pi', 'TFLite', 'TSA'],
         links: [
             {
                 label: 'GitHub',
@@ -37,19 +50,6 @@ const projects = [
                 url: 'https://github.com/confused-404/path-tracer'
             }
         ]
-    },
-    {
-        title: 'RRR Scouting App',
-        summary: 'A full-stack scouting platform used by Red Rock Robotics to collect, analyze, and export FRC match data during competition.',
-        how: 'Led core development and system design across a React/Vite frontend, Node/Express backend, Firebase storage/auth, real-time data entry, visualization, filtering, and export workflows.',
-        why: 'The app supports live strategy work for a top-ranked robotics team, handling concurrent scouts and unreliable competition Wi-Fi while keeping match data usable for drive team prep and alliance selection.',
-        tags: ['React', 'Node.js', 'Express', 'Firebase', 'FRC'],
-        links: [
-            {
-                label: 'GitHub',
-                url: 'https://github.com/confused-404/rrr-scouting-app'
-            }
-        ]
     }
 ];
 
@@ -77,11 +77,21 @@ const renderProjects = () => {
     projects.forEach((project) => {
         const article = createElement('article', { className: 'project reveal' });
         const title = createElement('h3', { text: project.title });
-        const summary = createElement('p', { text: project.summary });
-        const how = createElement('p', { text: project.how });
-        const why = createElement('p', { text: project.why });
+        const details = createElement('div', { className: 'project-details' });
         const tags = createElement('ul', { className: 'project-meta' });
         const links = createElement('div', { className: 'project-links' });
+
+        [
+            ['What', project.summary],
+            ['Built', project.how],
+            ['Purpose', project.why]
+        ].forEach(([label, text]) => {
+            const row = createElement('p', { className: 'project-detail' });
+            const labelElement = createElement('span', { text: label });
+
+            row.append(labelElement, document.createTextNode(text));
+            details.append(row);
+        });
 
         project.tags.forEach((tag) => {
             tags.append(createElement('li', { text: tag }));
@@ -95,7 +105,7 @@ const renderProjects = () => {
             links.append(anchor);
         });
 
-        article.append(title, summary, how, why, tags);
+        article.append(title, details, tags);
 
         if (project.links.length > 0) {
             article.append(links);

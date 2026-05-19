@@ -99,18 +99,17 @@ button:focus-visible {
     color: var(--text);
 }
 
-main,
-.site-footer {
+main {
     width: min(var(--content), calc(100% - 32px));
     margin: 0 auto;
 }
 
 .hero {
-    min-height: 68vh;
+    min-height: 58vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 72px 0 54px;
+    padding: 60px 0 32px;
 }
 
 .eyebrow,
@@ -190,6 +189,7 @@ h1 {
     grid-template-columns: 160px 1fr;
     gap: 36px;
     border-top: 1px solid var(--border);
+    scroll-margin-top: 84px;
     padding: 54px 0;
 }
 
@@ -236,9 +236,25 @@ h1 {
     letter-spacing: 0;
 }
 
-.project p {
+.project-details {
+    display: grid;
+    gap: 8px;
+}
+
+.project-detail {
     margin-bottom: 12px;
     color: var(--muted-strong);
+}
+
+.project-detail span {
+    display: inline-block;
+    min-width: 48px;
+    margin-right: 10px;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .project-meta {
@@ -281,18 +297,8 @@ h1 {
     color: var(--text);
 }
 
-.site-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    border-top: 1px solid var(--border);
-    padding: 34px 0 44px;
-    color: var(--muted);
-}
-
-.site-footer p {
-    margin: 0;
+.contact-section {
+    padding-bottom: 44px;
 }
 
 .footer-email {
@@ -337,7 +343,7 @@ h1 {
 
     .hero {
         min-height: auto;
-        padding: 58px 0 44px;
+        padding: 44px 0 28px;
     }
 
     h1 {
@@ -350,10 +356,6 @@ h1 {
         padding: 44px 0;
     }
 
-    .site-footer {
-        align-items: flex-start;
-        flex-direction: column;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
