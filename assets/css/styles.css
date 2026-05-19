@@ -226,7 +226,7 @@ h1 {
 .project-list {
     display: grid;
     gap: 16px;
-    margin-top: 24px;
+    margin-top: 0;
 }
 
 .project {
