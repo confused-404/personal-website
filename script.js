@@ -1,44 +1,53 @@
 const projects = [
     {
-        title: 'YADQN',
-        summary: 'A from-scratch Deep Q-Network experiment for solving CartPole in Gymnasium.',
-        how: 'Implemented the neural network and training loop without PyTorch to better understand the mechanics behind reinforcement learning.',
-        why: 'The project made abstract ML concepts concrete by exposing each part of the agent, environment loop, and optimization process.',
-        tags: ['Python', 'Reinforcement Learning', 'Neural Networks'],
+        title: 'Siren Detector',
+        summary: 'A real-time embedded audio system that detects emergency sirens and car honks for deaf drivers.',
+        how: 'Built around a Raspberry Pi 5 with dual I2S microphones, a Python/FastAPI backend, log-spectrogram CNN inference, and GCC-PHAT direction estimation.',
+        why: 'The project connects low-level audio capture, edge ML inference, and directional signal processing into a practical alert system with a lightweight web dashboard.',
+        tags: ['Python', 'FastAPI', 'Raspberry Pi', 'TFLite', 'Signal Processing'],
         links: [
             {
                 label: 'GitHub',
-                url: 'https://github.com/confused-404/yadqn'
+                url: 'https://github.com/confused-404/siren-detector'
             }
         ]
     },
     {
-        title: 'C++ Chat App with Winsock',
-        summary: 'A terminal chat server built to explore networking fundamentals and concurrent client handling.',
-        how: 'Used C++ and Winsock for the server implementation, then wrote a Python script to test client behavior.',
-        why: 'The project helped connect socket APIs, protocol flow, and real-time communication behavior in a small system.',
-        tags: ['C++', 'Winsock', 'Networking', 'Python'],
+        title: 'SeaGC',
+        summary: 'A from-scratch garbage collector experiment in C, currently implemented as a small stop-the-world exact collector.',
+        how: 'Built page-based allocation, explicit root sets, exact tracing, page-local livemaps, sweeping, page reuse, sparse-page evacuation, forwarding, and pointer repair.',
+        why: 'The project is a way to understand memory management from the inside by building the machinery a runtime needs to find live objects, move them, and repair references.',
+        tags: ['C', 'Garbage Collection', 'Memory Management', 'Runtime Systems'],
         links: [
             {
                 label: 'GitHub',
-                url: 'https://github.com/confused-404/chat-app'
+                url: 'https://github.com/confused-404/seagc'
             }
         ]
     },
     {
-        title: 'Water Watcher',
-        summary: 'A hackathon project focused on encouraging water conservation through lightweight gamification.',
-        how: 'Collaborated with a teammate to design and build the project quickly within a short event timeline.',
-        why: 'The project was useful practice in turning an open-ended problem into a focused prototype under time pressure.',
-        tags: ['Hackathon', 'Web App', 'Collaboration'],
+        title: 'Path Tracer',
+        summary: 'A small CPU path tracer written in C as a learning project around the math behind ray tracing.',
+        how: 'Implemented spheres, planes, triangles, diffuse/metal/glass materials, reflection, refraction, Moller-Trumbore intersections, AABB tests, BVH acceleration, and multithreaded rendering.',
+        why: 'The project grew out of a math investigation into ray tracing and turned vector algebra, ray-object intersections, and acceleration structures into a working renderer.',
+        tags: ['C', 'Rendering', 'Ray Tracing', 'BVH', 'Multithreading'],
         links: [
             {
-                label: 'Devpost',
-                url: 'https://devpost.com/software/water-watcher'
-            },
+                label: 'GitHub',
+                url: 'https://github.com/confused-404/path-tracer'
+            }
+        ]
+    },
+    {
+        title: 'RRR Scouting App',
+        summary: 'A full-stack scouting platform used by Red Rock Robotics to collect, analyze, and export FRC match data during competition.',
+        how: 'Led core development and system design across a React/Vite frontend, Node/Express backend, Firebase storage/auth, real-time data entry, visualization, filtering, and export workflows.',
+        why: 'The app supports live strategy work for a top-ranked robotics team, handling concurrent scouts and unreliable competition Wi-Fi while keeping match data usable for drive team prep and alliance selection.',
+        tags: ['React', 'Node.js', 'Express', 'Firebase', 'FRC'],
+        links: [
             {
                 label: 'GitHub',
-                url: 'https://github.com/confused-404/water-watcher'
+                url: 'https://github.com/confused-404/rrr-scouting-app'
             }
         ]
     }
@@ -86,7 +95,12 @@ const renderProjects = () => {
             links.append(anchor);
         });
 
-        article.append(title, summary, how, why, tags, links);
+        article.append(title, summary, how, why, tags);
+
+        if (project.links.length > 0) {
+            article.append(links);
+        }
+
         projectList.append(article);
     });
 };
