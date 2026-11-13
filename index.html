@@ -1,72 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yves Kloeckner, electrical engineering student at Columbia University.">
-    <title>Yves Kloeckner</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102842">
+  <meta name="description" content="Pick a run through Yves Kloeckner's projects, from embedded audio to systems, graphics, robotics, and machine learning.">
+  <title>Yves Kloeckner | Pick a Run</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-    <header class="site-header">
-        <nav class="site-nav" aria-label="Primary navigation">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-name" href="#top">Yves Kloeckner</a>
+    <a class="header-link" href="https://github.com/confused-404" target="_blank" rel="noopener noreferrer"><span class="header-link-long">ALL MY RUNS ON GITHUB</span><span class="header-link-short">GITHUB</span> <span aria-hidden="true">↗</span></a>
+  </header>
 
-    <main id="top">
-        <section class="hero reveal" aria-labelledby="hero-title">
-            <p class="eyebrow">Electrical engineering student at Columbia University</p>
-            <h1 id="hero-title">Yves Kloeckner</h1>
-            <p class="hero-copy">
-                I like learning how computers work, and I write code because it is the best way I know to do that.
-            </p>
-            <div class="hero-actions" aria-label="Primary links">
-                <a class="button primary" href="#projects">View Projects</a>
-                <a class="button" href="https://github.com/confused-404" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="button" href="https://www.linkedin.com/in/yveskloeckner" target="_blank" rel="noreferrer">LinkedIn</a>
-                <button class="button email-button" type="button" data-user="hosta.gruen" data-domain="gmail.com">
-                    Email
-                </button>
-            </div>
-            <p class="email-status" aria-live="polite"></p>
-        </section>
+  <main id="main">
+    <section class="summit" id="top" aria-labelledby="summit-title">
+      <div class="sky" aria-hidden="true"><span class="sun"></span><span class="snow snow-a">✦</span><span class="snow snow-b">✳</span><span class="snow snow-c">✦</span><span class="snow snow-d">✳</span></div>
+      <img class="mountain-scene" src="assets/mountain-scene.svg" alt="" aria-hidden="true">
+      <div class="summit-copy">
+        <p class="eyebrow">ELEVATION 9,000 FT / 06 RUNS OPEN</p>
+        <h1 id="summit-title">PICK<br>A <em>RUN.</em></h1>
+        <p>I'm Yves. I build things to find out how they work. Choose a run and see where it goes.</p>
+      </div>
 
-        <section id="about" class="section reveal" aria-labelledby="about-label">
-            <div id="about-label" class="section-label">About</div>
-            <div class="section-content">
-                <p>
-                    I code because I enjoy it. Most projects start as a way to understand some part of computers
-                    better, then turn into something concrete enough to test, break, and improve. Right now, I am
-                    especially interested in low-level systems and the details that usually sit underneath higher-level
-                    tools.
-                </p>
-            </div>
-        </section>
+      <nav class="trailpost" aria-label="Choose a project trail">
+        <div class="post-perch" aria-hidden="true">
+          <svg viewBox="0 0 100 80" focusable="false">
+            <path d="m53 55-2 15m12-16 3 16m-20 0h12m3 0h12" fill="none" stroke="#39494a" stroke-width="2" stroke-linecap="round"/>
+            <path d="m36 42-25 13 28-3" fill="#536568"/>
+            <ellipse cx="53" cy="43" rx="24" ry="17" fill="#e5e4d8" transform="rotate(-14 53 43)"/>
+            <path d="M31 46q9-26 35-13-8 22-35 13" fill="#7d9292"/>
+            <circle cx="70" cy="28" r="13" fill="#39494a"/>
+            <path d="M58 29q11-1 22 5-11 11-22-5" fill="#f4f3e9"/>
+            <path d="m81 26 12 5-12 2" fill="#39494a"/>
+            <circle cx="74" cy="25" r="2" fill="#f4f3e9"/>
+          </svg>
+        </div>
+        <div class="post-beam" aria-hidden="true"></div>
+        <a class="trail-arrow arrow-right" href="runs/siren.html" style="--angle:-5deg">
+          <span class="trail-icon blue-square" aria-hidden="true"></span>
+          <span class="trail-name"><strong>BLUEBIRD RUN</strong><small>SIREN DETECTOR</small></span>
+          <span class="arrow-tip" aria-hidden="true">→</span>
+        </a>
+        <a class="trail-arrow arrow-left" href="runs/seagc.html" style="--angle:4deg">
+          <span class="arrow-tip" aria-hidden="true">←</span>
+          <span class="trail-name"><strong>MEMORY CHUTE</strong><small>SEAGC</small></span>
+          <span class="trail-icon black-diamond" aria-hidden="true"></span>
+        </a>
+        <a class="trail-arrow arrow-right" href="runs/path-tracer.html" style="--angle:3deg">
+          <span class="trail-icon double-diamond" aria-hidden="true"><i></i><i></i></span>
+          <span class="trail-name"><strong>PHOTON PEAK</strong><small>PATH TRACER</small></span>
+          <span class="arrow-tip" aria-hidden="true">→</span>
+        </a>
+        <a class="trail-arrow arrow-left" href="runs/scouting.html" style="--angle:-3deg">
+          <span class="arrow-tip" aria-hidden="true">←</span>
+          <span class="trail-name"><strong>ROBOT RIDGE</strong><small>RRR SCOUTING</small></span>
+          <span class="trail-icon green-circle" aria-hidden="true"></span>
+        </a>
+        <a class="trail-arrow arrow-right" href="runs/yadqn.html" style="--angle:-2deg">
+          <span class="trail-icon black-diamond" aria-hidden="true"></span>
+          <span class="trail-name"><strong>THE Q-LINE</strong><small>YADQN</small></span>
+          <span class="arrow-tip" aria-hidden="true">→</span>
+        </a>
+        <a class="trail-arrow arrow-left" href="runs/sshbs.html" style="--angle:5deg">
+          <span class="arrow-tip" aria-hidden="true">←</span>
+          <span class="trail-name"><strong>THE SHORTCUT</strong><small>SSHBS</small></span>
+          <span class="trail-icon blue-square" aria-hidden="true"></span>
+        </a>
+        <svg class="parked-skis" viewBox="0 0 110 240" aria-hidden="true" focusable="false">
+          <g stroke-linejoin="round">
+            <path d="M15 231 70 24Q77 0 82 13L29 233Z" fill="#a65d43" stroke="#6f493d" stroke-width="2"/>
+            <path d="M38 233 87 27Q94 3 99 16L52 235Z" fill="#c9cbb9" stroke="#66756c" stroke-width="2"/>
+            <path d="m23 206 10 3m42-179 7 2m-36 175 10 2m35-175 7 2" stroke="#f4f3e9" stroke-width="6"/>
+            <g fill="#394e50" stroke="#e4e8df" stroke-width="2">
+              <path d="m42 127 11 3-7 27-11-3Z"/><path d="m52 91 10 3-4 15-10-3Z"/>
+              <path d="m64 130 11 3-6 27-11-3Z"/><path d="m73 94 10 2-3 15-10-2Z"/>
+            </g>
+          </g>
+        </svg>
+        <div class="post-base" aria-hidden="true"></div>
+      </nav>
+      <a class="summit-scroll" href="runs/siren.html">DROP IN <span aria-hidden="true">↓</span></a>
+    </section>
 
-        <section id="projects" class="section reveal" aria-labelledby="projects-label">
-            <div id="projects-label" class="section-label">Projects</div>
-            <div class="section-content">
-                <div class="project-list" data-projects></div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section reveal" aria-labelledby="contact-label">
-            <div id="contact-label" class="section-label">Contact</div>
-            <div class="section-content">
-                <div class="footer-links">
-                    <a href="https://github.com/confused-404" target="_blank" rel="noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/in/yves-k-0b92992b5/" target="_blank" rel="noreferrer">LinkedIn</a>
-                    <button class="footer-email" type="button" data-user="hosta.gruen" data-domain="gmail.com">Email</button>
-                </div>
-            </div>
-        </section>
-    </main>
+  </main>
+  <footer class="site-footer"><span>© <span id="year">2026</span> YVES KLOECKNER</span></footer>
 </body>
-
 </html>

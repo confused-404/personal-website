@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSHBS | Yves Kloeckner</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="run.css">
+  <script defer src="projects.js"></script>
+  <script defer src="run.js"></script>
+</head>
+<body data-project="sshbs">
+  <header><a class="wordmark" href="../index.html">Yves Kloeckner</a><p id="progress"></p></header>
+  <main id="run" tabindex="0" aria-label="Project trail. Click or tap to ride, or use the Continue downhill button.">
+    <div class="landscape" aria-hidden="true">
+      <div class="distant-ridge"></div><div class="near-ridge"></div><div class="snowfield"></div>
+      <div class="forest" id="forest"></div><div class="tracks"></div>
+      <div class="trail-marker"><span id="marker-number">01</span></div>
+    </div>
+    <div class="station">
+      <div class="station-roof" aria-hidden="true"></div>
+      <section class="information" aria-live="polite" aria-atomic="true">
+        <p id="stop-label"></p><h1 id="stop-title"></h1><p id="stop-copy"></p>
+        <div id="finish" hidden><a id="github" target="_blank" rel="noopener noreferrer">Open the project on GitHub <span aria-hidden="true">↗</span></a><p class="finish-note">Your next trail starts at the summit.</p></div>
+      </section>
+      <div class="station-posts" aria-hidden="true"></div>
+    </div>
+    <div id="rider"><svg viewBox="0 0 110 120" aria-hidden="true"><g fill="none" stroke="#253e46" stroke-linecap="round" stroke-linejoin="round"><path d="m29 87 23-24 22 24" stroke-width="12"/><path d="m50 35-8 29 21 7 8-30" fill="#b9573d" stroke-width="4"/><path class="riding-arms" d="m46 44-19 14-15-5m56-9 19 12 12-2" stroke-width="8"/>
+      <g class="tow-attachment"><path class="hauling-cable" d="M-2000 22H2000" stroke="#667c75" stroke-width="3" stroke-dasharray="8 5"/><path d="M22 22v32m-9 0h25" stroke="#465e58" stroke-width="3"/><path d="m46 44-12 16-12-6m47-12-18 17-23-5" stroke-width="7"/></g><circle cx="65" cy="20" r="13" fill="#253e46" stroke-width="3"/><path d="m54 18 22 4" stroke="#ecede3" stroke-width="6"/><path d="M14 93q44 19 81 7" stroke="#b9573d" stroke-width="7"/><path d="m23 96 13-4m35 11 12-3" stroke-width="5"/></g></svg><span class="snow-spray" aria-hidden="true"></span></div>
+    <button id="previous" type="button" class="rope-tow"><svg viewBox="0 0 150 70" aria-hidden="true"><path d="M20 20v45m105-45v45"/>
+      <path class="tow-cable" d="M0 20h150" stroke-dasharray="6 4"/>
+      <g class="tow-handle"><path d="M85 20v25m-17 0h34"/></g>
+      <g class="tow-wheel wheel-left"><circle cx="20" cy="20" r="9"/><path d="m11 20h18m-9-9v18"/></g>
+      <g class="tow-wheel wheel-right"><circle cx="125" cy="20" r="9"/><path d="m116 20h18m-9-9v18"/></g></svg><span>Rope tow <small>Previous stop</small></span></button>
+    <a href="../index.html" class="lift" aria-label="Board the chairlift back to trail selection"><svg viewBox="0 0 180 170" aria-hidden="true"><g stroke="#3f585d" fill="none" stroke-width="4" stroke-linejoin="round"><path d="M0 18 180 0M90 9v38l-30 27v61h89V74H92"/><path d="M60 119h89M72 119V91h64v28"/><path d="M60 136h89" stroke-width="7"/><circle cx="90" cy="10" r="6" fill="#b9573d"/></g></svg><span>Chairlift <small>Back to the summit ↗</small></span></a>
+    <div class="trail-footer"><p id="trail-location">Upper mountain</p><button id="next" type="button">Continue downhill <span aria-hidden="true">↘</span><small>Click or tap anywhere on the trail</small></button><p class="keyboard-hint">← uphill · downhill →</p></div>
+  </main>
+  <noscript><p>This trail needs JavaScript. <a href="https://github.com/confused-404/sshbs">Explore the project on GitHub.</a></p></noscript>
+</body>
+</html>
