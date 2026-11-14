@@ -65,7 +65,9 @@ window.projects = {
       ],
       [
         "Follow the light",
-        "Rays interact with materials to build an image one sample at a time."
+        "Rays interact with materials to build an image one sample at a time.",
+        "../assets/path-tracer-render.jpeg",
+        "A path-traced scene of colorful spheres, including glass and reflective materials, on a pale ground."
       ],
       [
         "Keeping the render moving",

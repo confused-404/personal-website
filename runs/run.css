@@ -39,6 +39,7 @@ main { --distance: 0px; position: relative; isolation: isolate; height: calc(100
 #stop-label { font: 10px/1.5 monospace; letter-spacing: .15em; text-transform: uppercase; color: #596c69; margin: 0 0 16px; }
 h1 { font: 400 clamp(26px, 2.6vw, 38px)/1.15 Georgia, serif; letter-spacing: -.025em; margin: 0 0 18px; }
 #stop-copy { font-size: 15px; line-height: 1.65; margin: 0; }
+.stop-image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 18px; border: 1px solid #586660; }
 .at-start .information { background: #ece4c9; border-top: 7px solid #a48443; }
 .at-start #stop-label { color: #6d5328; }
 #rider { position: absolute; width: 98px; left: 27%; top: 60%; transform: translate(-50%, -72%); transition: transform var(--travel) ease; }

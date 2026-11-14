@@ -32,9 +32,17 @@ function setTerrain(target) {
 
 function render() {
   stop = readStop();
-  const [title, copy] = project.stops[stop];
+  const [title, copy, image, imageAlt] = project.stops[stop];
   document.getElementById('stop-title').textContent = title;
   document.getElementById('stop-copy').textContent = copy;
+  const stopImage = document.getElementById('stop-image');
+  if (stopImage) {
+    stopImage.hidden = !image;
+    if (image) {
+      if (stopImage.getAttribute('src') !== image) stopImage.src = image;
+      stopImage.alt = imageAlt || '';
+    }
+  }
   document.getElementById('stop-label').textContent = stop === 0 ? 'Trail notice / before you drop in' : `${String(stop + 1).padStart(2, '0')} / ${locations[stop]}`;
   document.getElementById('progress').textContent = `${project.title} / ${String(stop + 1).padStart(2, '0')} of ${String(project.stops.length).padStart(2, '0')}`;
   document.getElementById('trail-location').textContent = locations[stop];
