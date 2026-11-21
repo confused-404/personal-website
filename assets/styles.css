@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light;
+  color: #262626;
+  background: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 44rem;
+  margin: clamp(1.5rem, 5vw, 4rem) auto;
+  padding: 0 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+h1, h2 { line-height: 1.25; }
+h1 { margin-bottom: .5rem; font-size: 2rem; }
+h2 { margin: 0 0 .75rem; font-size: 1.3rem; }
+header { margin-bottom: 2.5rem; }
+header p { margin-top: 0; }
+section + section { margin-top: 2.5rem; }
+main > h2 { margin-top: 2rem; }
+p { margin: .75rem 0; }
+
+a, a:visited {
+  color: #285e70;
+  text-underline-offset: .15em;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid #285e70; outline-offset: 4px; }
+
+ul { padding-left: 1.25rem; }
+li + li { margin-top: 1.5rem; }
+
+figure { margin: 1rem 0 1.5rem; }
+img { display: block; max-width: 100%; height: auto; }
+.project-preview { max-width: 24rem; }
+figcaption { margin-top: .5rem; color: #626262; font-size: .875rem; }
+
+footer { margin-top: 4rem; }
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.photos figure { margin: 0; }
+
+pre {
+  margin: 0;
+  padding: .5rem 0;
+  font-size: .875rem;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}

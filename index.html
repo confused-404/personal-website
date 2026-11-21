@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yves Kloeckner's projects in systems programming, graphics, embedded audio, robotics, and machine learning.">
   <title>Yves Kloeckner</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header>
     <h1>Yves Kloeckner</h1>
-    <p><a href="https://github.com/confused-404">GitHub</a></p>
+    <p><a href="https://github.com/confused-404">GitHub</a> · <a href="https://linkedin.com/in/yveskloeckner">LinkedIn</a> · <a href="#projects">Projects</a> · <a href="#currently">Currently</a></p>
   </header>
 
   <main>
@@ -19,29 +20,56 @@
       <p>My projects span systems programming, computer graphics, embedded audio, robotics, and machine learning.</p>
     </section>
 
+    <section aria-labelledby="currently">
+      <h2 id="currently">Currently</h2>
+      <p>I like lifting, biking, snowboarding, getting food with friends, and just walking around the city.</p>
+    </section>
+
     <section aria-labelledby="projects">
       <h2 id="projects">Projects</h2>
       <ul>
         <li>
-          <p><strong><a href="runs/siren.html">Siren Detector</a></strong>: A real-time siren and horn detector that estimates sound direction using two microphones and a Raspberry Pi. (<a href="https://github.com/confused-404/siren-detector">GitHub</a>)</p>
+          <p><strong><a href="https://github.com/confused-404/siren-detector">Siren Detector</a></strong>: A real-time siren and horn detector. Two microphones estimate where a sound is coming from, and a spectrogram-based neural network runs inference on a Raspberry Pi.</p>
         </li>
         <li>
-          <p><strong><a href="runs/seagc.html">SEA GC</a></strong>: A garbage collector built from scratch in C, with page-based allocation and exact root tracing. (<a href="https://github.com/confused-404/seagc">GitHub</a>)</p>
+          <p><strong><a href="https://github.com/confused-404/seagc">SEA GC</a></strong>: A garbage collector built from scratch in C, with page-based allocation and exact root tracing.</p>
+          <figure class="project-preview">
+            <pre role="img" aria-label="A reachability sketch: roots point to A, which points to B. C and D are unreachable.">roots → A → B
+
+        C   D</pre>
+            <figcaption>A and B are reachable. C and D can be collected.</figcaption>
+          </figure>
         </li>
         <li>
-          <p><strong><a href="runs/path-tracer.html">Path Tracer</a></strong>: A multithreaded renderer in C with BVH acceleration and support for different materials. (<a href="https://github.com/confused-404/path-tracer">GitHub</a>)</p>
+          <p><strong><a href="https://github.com/confused-404/path-tracer">Path Tracer</a></strong>: A multithreaded renderer in C. Rays bounce through diffuse, glass, and reflective materials, with BVH acceleration to cut down intersection work.</p>
+          <figure class="project-preview">
+            <a href="assets/path-tracer-render.jpeg"><img src="assets/path-tracer-render.jpeg" width="1024" height="576" loading="lazy" decoding="async" alt="Colorful diffuse, glass, and reflective spheres rendered with the path tracer."></a>
+          </figure>
         </li>
         <li>
-          <p><strong><a href="runs/scouting.html">RRR Scouting</a></strong>: A robotics scouting platform for live data collection, analysis, and export. (<a href="https://github.com/confused-404/rrr-scouting-app">GitHub</a>)</p>
+          <p><strong><a href="https://github.com/confused-404/rrr-scouting-app">RRR Scouting</a></strong>: A live scouting platform for a robotics team. Scouts log match observations that the team can analyze and export during competition.</p>
         </li>
         <li>
-          <p><strong><a href="runs/yadqn.html">YADQN</a></strong>: A Deep Q-Network written from scratch in NumPy, including a replay buffer, target network, and training loop. (<a href="https://github.com/confused-404/yadqn">GitHub</a>)</p>
+          <p><strong><a href="https://github.com/confused-404/yadqn">YADQN</a></strong>: A Deep Q-Network written from scratch in NumPy, with a replay buffer, target network, and training loop.</p>
         </li>
         <li>
-          <p><strong><a href="runs/sshbs.html">SSHBS</a></strong>: A command-line tool written in C for managing SSH hosts and connecting to them quickly. (<a href="https://github.com/confused-404/sshbs">GitHub</a>)</p>
+          <p><strong><a href="https://github.com/confused-404/sshbs">SSHBS</a></strong>: A small, fast command-line tool in C for managing SSH hosts and connecting to them.</p>
         </li>
       </ul>
     </section>
   </main>
+
+  <footer>
+    <div class="photos">
+      <figure>
+        <img src="assets/new-york.jpg" width="768" height="960" loading="lazy" decoding="async" alt="Manhattan lit up at dusk, seen from the top of One World Trade Center.">
+        <figcaption>New York, from the top of One World</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/salt-lake-city.jpg" width="768" height="960" loading="lazy" decoding="async" alt="City lights of Salt Lake City spread across the valley at night.">
+        <figcaption>Salt Lake City</figcaption>
+      </figure>
+    </div>
+  </footer>
 </body>
 </html>
